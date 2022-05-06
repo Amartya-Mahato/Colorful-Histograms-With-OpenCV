@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="521.0" prefWidth="720.0" style="-fx-border-color: white; -fx-background-color: black;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.histogram_simple.AppController">
+   <right>
+      <VBox prefHeight="435.0" prefWidth="190.0" style="-fx-border-color: white; -fx-background-color: black;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" prefHeight="45.0" prefWidth="293.0" style="-fx-border-color: white; -fx-background-color: white;" text="Controls" textAlignment="CENTER">
+               <font>
+                  <Font name="Dubai Regular" size="18.0" />
+               </font>
+            </Label>
+            <JFXToggleButton fx:id="logobt" alignment="CENTER_RIGHT" contentDisplay="RIGHT" onAction="#setLogo" prefHeight="59.0" prefWidth="290.0" style="-fx-border-color: white;" text="Show Logo" textFill="WHITE" toggleColor="#009485" unToggleColor="#da0000" unToggleLineColor="#c88484">
+               <font>
+                  <Font name="Dubai Regular" size="14.0" />
+               </font>
+            </JFXToggleButton>
+            <JFXToggleButton fx:id="gryScl" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="61.0" prefWidth="291.0" style="-fx-border-color: white;" text="Show in GrayScale" textFill="WHITE" toggleColor="#009485" toggleLineColor="#78c2ba" unToggleColor="#da0000" unToggleLineColor="#c88484">
+               <font>
+                  <Font name="Dubai Regular" size="14.0" />
+               </font>
+            </JFXToggleButton>
+            <Label alignment="CENTER" prefHeight="271.0" prefWidth="190.0" style="-fx-alignment: CENTER;" text="Histogram" textFill="WHITE">
+               <font>
+                  <Font name="Dubai Regular" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </right>
+   <bottom>
+      <HBox prefHeight="82.0" prefWidth="718.0" style="-fx-border-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="strtButton" alignment="CENTER" contentDisplay="CENTER" onAction="#startCamera" prefHeight="82.0" prefWidth="120.0" ripplerFill="WHITE" style="-fx-border-color: white; -fx-background-color: green;" text="Start Camera" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <ImageView fx:id="hImagei" fitHeight="82.0" fitWidth="596.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </HBox>
+   </bottom>
+   <effect>
+      <Glow />
+   </effect>
+   <center>
+      <ImageView fx:id="Imagei" fitHeight="299.0" fitWidth="483.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
